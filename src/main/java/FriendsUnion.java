@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.Set;
 
 public class FriendsUnion {
 
@@ -7,32 +7,42 @@ public class FriendsUnion {
      * */
     //for newKey
 
-    private Integer oldKey;
-    private Integer secondPartKey;
+    /**
+     * userId - whom we recommend
+     */
+    private Integer userId;
 
-    private List<Integer> friends ;
+    /**
+     * userToId - who we recommend
+     */
+    private Integer userToId;
 
-    public Integer getOldKey() {
-        return oldKey;
+    /**
+     * common friends between userId and userToId
+     */
+    private Set<Integer> friends;
+
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setOldKey(Integer oldKey) {
-        this.oldKey = oldKey;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public Integer getSecondPartKey() {
-        return secondPartKey;
+    public Integer getUserToId() {
+        return userToId;
     }
 
-    public void setSecondPartKey(Integer secondPartKey) {
-        this.secondPartKey = secondPartKey;
+    public void setUserToId(Integer userToId) {
+        this.userToId = userToId;
     }
 
-    public List<Integer> getFriends() {
+    public Set<Integer> getFriends() {
         return friends;
     }
 
-    public void setFriends(List<Integer> friends) {
+    public void setFriends(Set<Integer> friends) {
         this.friends = friends;
     }
 }

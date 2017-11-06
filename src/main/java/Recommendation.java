@@ -1,14 +1,18 @@
+/*
 import java.util.*;
 
 public class Recommendation {
 
     public List<FriendsUnion> getFriendsUnions(Map<Integer, List<Integer>> socialNetworkMap) {
-        /*
+        */
+/*
          * Class getFriendsUnions creating List based on entity FriendsUnion
-         * */
+         * *//*
+
         List<FriendsUnion> friendsUnions = new ArrayList<>();
         for (Integer key : socialNetworkMap.keySet()) {
-            List<Integer> friendsIDs = socialNetworkMap.get(key);
+            */
+/*List<Integer> friendsIDs = socialNetworkMap.get(key);
 
             friendsIDs.forEach(e -> {
                 FriendsUnion union = new FriendsUnion();
@@ -18,8 +22,10 @@ public class Recommendation {
                 friendsUnions.add(union);
             });
 
+*//*
 
-            /*
+            */
+/*
             for (Integer friendsID : friendsIDs) {
 
                 FriendsUnion union = new FriendsUnion();
@@ -28,7 +34,8 @@ public class Recommendation {
                 union.setFriends(friendsIDs);
                 friendsUnions.add(union);
 
-            }*/
+            }*//*
+
         }
         return friendsUnions;
     }
@@ -52,7 +59,7 @@ public class Recommendation {
                 friendsWithDuplicates.addAll(coincidentElement1.getFriends());
                 friendsWithDuplicates.addAll(coincidentElement2.getFriends());
 
-                commonFriendsUnion.setFriends(findDuplicates(friendsWithDuplicates));
+                //commonFriendsUnion.setFriends(findDuplicates(friendsWithDuplicates));
                 commonFriends2.add(commonFriendsUnion);
 
             }
@@ -61,7 +68,8 @@ public class Recommendation {
 
 
 
-        /*List<FriendsUnion> commonFriends = new ArrayList<>();
+        */
+/*List<FriendsUnion> commonFriends = new ArrayList<>();
         for (FriendsUnion coincidentElement1: friendsUnions) {
 
             if (!coincidentElement1.getFriends().isEmpty()) {
@@ -88,7 +96,8 @@ public class Recommendation {
                 }
             }
 
-        }*/
+        }*//*
+
         return commonFriends2;
     }
 
@@ -107,3 +116,4 @@ public class Recommendation {
         return listToReturn;
     }
 }
+*/
